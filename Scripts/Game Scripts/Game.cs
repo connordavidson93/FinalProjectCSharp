@@ -2,6 +2,7 @@
 using System;
 public class Game{
     //Beginning when you run the game
+    public static bool canPlay = true;
     public string Opening(){
         Console.WriteLine("Welcome to the Superbowl! The big game is about to begin!");
     }
