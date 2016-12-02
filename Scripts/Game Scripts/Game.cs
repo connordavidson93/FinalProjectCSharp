@@ -8,7 +8,8 @@ public class Game{
 
     //Running through the game's main function
     public void Play(){
-        ChooseTeam();
+        TeamBase.ChooseTeam();
+
 
     }
     
@@ -19,6 +20,7 @@ public class Game{
 }
 /*After Game starts: 
     Choose a team.
+    List Players.
     Choose a play.
     Plays gain yards if successful.
         Run = 10 yards (basic)
@@ -30,6 +32,6 @@ public class Game{
         Pull Back > Hail Mary
     Repeat Play
     Four chances to gain 50 yards.
-    If gain 50 yards, win game "Touchdown"
-    If do not gain 50 yards, lose game "Turnover"
+    If gain 50 yards, win game "Touchdown".
+    If do not gain 50 yards, lose game "Turnover".
     */
