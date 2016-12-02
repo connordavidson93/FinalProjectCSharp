@@ -8,6 +8,7 @@ public class Game{
 
     //Running through the game's main function
     public void Play(){
+        ChooseTeam();
 
     }
     
