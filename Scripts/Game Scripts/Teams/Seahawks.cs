@@ -4,3 +4,8 @@ using System;
 public class Seahawks: TeamBase{
     
 }
+
+/*Players are
+Russell Wilson - Quarterback
+Doug Baldwin - Receiver
+Thomas Rawls - Runningback

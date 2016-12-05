@@ -4,3 +4,8 @@ using System;
 public class Patriots: TeamBase{
     
 }
+
+/*Players are
+Tom Brady - Quarterback
+Julian Edelman - Receiver
+James White - Runningback
