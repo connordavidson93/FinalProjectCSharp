@@ -4,4 +4,4 @@ public class DefensivePlayBase{
     
 }
 
-/*Need to create a function that runs random generated number against offensive plays that either succeed or fail.
+/*Need to create a function that runs random generated number against offensive plays that either succeed or fail.*/

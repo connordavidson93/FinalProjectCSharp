@@ -8,4 +8,4 @@ public class TeamBase{
     }
 }
 
-/*Need a way to determine different lists of players for the different teams, using the names of the team for use in the game.
+/*Need a way to determine different lists of players for the different teams, using the names of the team for use in the game.*/

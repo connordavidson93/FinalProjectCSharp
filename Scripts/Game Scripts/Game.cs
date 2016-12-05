@@ -5,11 +5,12 @@ public class Game{
     public static bool canPlay = true;
     public string Opening(){
         Console.WriteLine("Welcome to the Superbowl! The big game is about to begin!");
+        TeamBase.ChooseTeam();
     }
 
     //Running through the game's main function
     public void Play(){
-        TeamBase.ChooseTeam();
+        
 
 
     }
