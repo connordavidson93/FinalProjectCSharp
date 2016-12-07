@@ -10,13 +10,13 @@ namespace connor
     {
         public string position { get; set; }
         public string Name { get; set; }
-        public int JersyNumber { get; set; }
+        public int JerseyNumber { get; set; }
 
         public Player(string pos, string name, int number)
         {
             position = pos;
             Name = name;
-            JersyNumber = number;
+            JerseyNumber = number;
         }
     }
 }

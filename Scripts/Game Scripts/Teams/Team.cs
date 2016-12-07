@@ -31,7 +31,7 @@ namespace connor
             Console.WriteLine("Team Roster For the " + TeamName);
             foreach(Player p in myPlayers)
             {
-                Console.WriteLine(p.JersyNumber.ToString() + "   " + p.Name + "  -> " + p.position);
+                Console.WriteLine(p.JerseyNumber.ToString() + "   " + p.Name + "  -> " + p.position);
             }
         }
 
