@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ConsoleApplication
+namespace connor
 {
-    public class Program
+    class Program
     {
         public static Game myGame = new Game();
-        public static void Main(string[] args){
+        static void Main(string[] args)
+        {
             myGame.Opening();
             myGame.Play();
         }
-
-
     }
 }
