@@ -15,29 +15,35 @@ namespace connor
         public void Opening()
         {
             Console.WriteLine("Welcome to the Superbowl! The big game is about to begin!");
+            GameTimer();
             Console.WriteLine("It's the Patriots against the Seahawks - which team will you play?");
             string team = "";
-            while (!team.Equals("Patriots") && !team.Equals("Seahawks")) { 
+            while (!team.Equals("Patriots") && !team.Equals("Seahawks"))
+            {
                 team = Console.ReadLine();
                 if (team.Equals("Patriots"))
                 {
-                    // then create a patriots team
+                    // Creates a patriots team
                     myTeam = new Team(team);
                     CompTeam = new Team("Seahawks");
-                } else
+                }
+                else
                 {
                     if (team.Equals("Seahawks"))
                     {
+                        //Creates a Seahawks team
                         myTeam = new Team(team);
                         CompTeam = new Team("Patriots");
-                    } else
+                    }
+                    else
                     {
+                        //If invalid entry
                         Console.WriteLine("Please enter Patriots or Seahawks!");
                     }
                 }
             }
             Console.WriteLine("You are playing for the " + team);
-            
+
         }
         //Timer to create a pause between plays and player choices
         public static void GameTimer()
@@ -47,15 +53,19 @@ namespace connor
 
         public void Play()
         {
+            //Lists the team rosters based on what team the player chose.
             Console.WriteLine("The teams are... ");
+            GameTimer();
             Console.WriteLine("You are the " + myTeam.TeamName);
             myTeam.PrintRoster();
             Console.WriteLine("----");
+            GameTimer();
             Console.WriteLine("The Computer is the " + CompTeam.TeamName);
             CompTeam.PrintRoster();
+            Console.WriteLine("----");
 
 
-            // this is the game loop
+            // This is the game loop
             bool okToPlay = true;
             int NumTries = 0;
             yards = 0;
@@ -63,31 +73,44 @@ namespace connor
             while (okToPlay && NumTries < 4)
             {
                 // choose the play for the player
-                myTeam.ChoosPlay();
-                // chose the play for the computer
+                myTeam.ChoosePlay();
+                // choose the play for the computer
                 CompTeam.RandomPlay();
                 // execute the play
                 int gain = PlayBall(myTeam, CompTeam);
-                // dimaply the results
+                // display the results
                 Console.WriteLine("Yards Gained: " + gain.ToString());
                 yards += gain;
+                GameTimer();
                 // see if the game is over
                 NumTries++;
-                if ( yards >= 50 )
+                if (yards >= 50)
                     okToPlay = false;
             }
-            if(yards >= 50)
+            //Getting 50 yards in four downs wins the game.
+            //Not getting 50 yards in four downs loses the game.
+            if (yards >= 50)
+            {
+                Console.WriteLine("Touchdown!");
                 Console.WriteLine("You Win With " + yards.ToString() + "yards.");
+                Console.WriteLine("Game Over!");
+            }
             else
+            {
+                Console.WriteLine("Turnover");
                 Console.WriteLine("You Lose With only " + yards.ToString() + "yards.");
-            Console.WriteLine("Game Over!");
+                GameTimer();
+                Console.WriteLine("Game Over!");
+            }
         }
-        private int PlayBall( Team myTeam, Team CompTeam )
+        private int PlayBall(Team myTeam, Team CompTeam)
         {
             int yardsGained = 0;
             Console.WriteLine("Play:  " + myTeam.PlayName + " VS " + CompTeam.PlayName);
+            GameTimer();
             switch (myTeam.PlayName)
             {
+                //Checking player's choice against computer's choice to see if it's a successful play.
                 case "Run":
                     if (!CompTeam.PlayName.Equals("Hold"))
                         yardsGained = 10;

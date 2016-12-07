@@ -35,7 +35,7 @@ namespace connor
             }
         }
 
-        public void ChoosPlay()
+        public void ChoosePlay()
         {
             Console.WriteLine("Choose The Play");
             OffensePlays p = new OffensePlays();
