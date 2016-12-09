@@ -12,6 +12,7 @@ namespace connor
         public string TeamName { get; set; }
         public string PlayName { get; set; }
 
+        //The player chooses either Patriots or Seahawks, then the "team" is created.
         public Team( string teamName)
         {
             if (teamName.Equals("Patriots"))
@@ -25,7 +26,8 @@ namespace connor
             }
             TeamName = teamName;
         }
-
+        
+        //The list of players on each team is displayed, first with number, then name, and then position.
         public void PrintRoster()
         {
             Console.WriteLine("Team Roster For the " + TeamName);
@@ -35,11 +37,12 @@ namespace connor
             }
         }
 
+        //Choosing the play to attempt yard gain.
         public void ChoosePlay()
         {
             Console.WriteLine("Choose The Play");
             OffensePlays p = new OffensePlays();
-            p.PrinPays();
+            p.PrintPlays();
             PlayName = "";
             while (!p.IsPlayValid(PlayName))
             {
@@ -47,7 +50,8 @@ namespace connor
                 PlayName = Console.ReadLine();
             }
         }
-
+        
+        //The computer player randomly chooses a play to counter the player's choice.
         public void RandomPlay()
         {
             Random r = new Random();
