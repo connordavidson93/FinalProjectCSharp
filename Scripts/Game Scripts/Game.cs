@@ -93,14 +93,14 @@ namespace connor
             {
                 Console.WriteLine("Touchdown!");
                 GameTimer();
-                Console.WriteLine(myTeam.TeamName + " Win with " + yards.ToString() + "yards.");
+                Console.WriteLine(myTeam.TeamName + " Win with " + yards.ToString() + " yards.");
                 Console.WriteLine("Game Over!");
             }
             else
             {
                 Console.WriteLine("Turnover!");
                 GameTimer();
-                Console.WriteLine(myTeam.TeamName + " Lose with only " + yards.ToString() + "yards.");
+                Console.WriteLine(myTeam.TeamName + " Lose with only " + yards.ToString() + " yards.");
                 GameTimer();
                 Console.WriteLine("Game Over!");
             }
