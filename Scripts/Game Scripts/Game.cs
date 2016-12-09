@@ -92,13 +92,15 @@ namespace connor
             if (yards >= 50)
             {
                 Console.WriteLine("Touchdown!");
-                Console.WriteLine("You Win With " + yards.ToString() + "yards.");
+                GameTimer();
+                Console.WriteLine(myTeam.TeamName + " Win with " + yards.ToString() + "yards.");
                 Console.WriteLine("Game Over!");
             }
             else
             {
-                Console.WriteLine("Turnover");
-                Console.WriteLine("You Lose With only " + yards.ToString() + "yards.");
+                Console.WriteLine("Turnover!");
+                GameTimer();
+                Console.WriteLine(myTeam.TeamName + " Lose with only " + yards.ToString() + "yards.");
                 GameTimer();
                 Console.WriteLine("Game Over!");
             }
